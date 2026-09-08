@@ -49,10 +49,15 @@ class MczBacVideBinarySensor(MczMqttEntity, BinarySensorEntity):
     strings.json/translations (state.binary_sensor.bac_vide), plus
     explicite que le générique "Problème détecté"/"OK" de device_class
     PROBLEM. Icône dynamique assortie (tasse vide/pleine).
+
+    Polarité : ESP1 lit `digitalRead(BUTTON_PIN)` avec `INPUT_PULLUP`
+    (donc "1" = circuit ouvert au repos, "0" = fermé/déclenché). Confirmé
+    inversé par l'usage réel (fredo, 2026-09-08) par rapport à un mapping
+    "1"=vide naïf : "0" = vide, "1" = plein.
     """
 
     def _handle_state(self, payload: str) -> None:
-        self._attr_is_on = payload == "1"
+        self._attr_is_on = payload == "0"
 
     @property
     def icon(self) -> str:
