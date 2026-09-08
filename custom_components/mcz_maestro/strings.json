@@ -1,0 +1,47 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "data": {
+          "name": "Name",
+          "topic_prefix": "MQTT topic prefix"
+        }
+      }
+    },
+    "error": {
+      "invalid_topic_prefix": "Topic prefix cannot be empty"
+    },
+    "abort": {
+      "already_configured": "This topic prefix is already configured"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "temperature_fumee": { "name": "Flue gas temperature" },
+      "temperature_ambiante": { "name": "Room temperature" },
+      "infos": { "name": "Status" }
+    },
+    "binary_sensor": {
+      "online": { "name": "Online" },
+      "bac_vide": { "name": "Hopper empty" }
+    },
+    "button": {
+      "reboot": { "name": "Reboot bridge" }
+    },
+    "switch": {
+      "on_off": { "name": "Power" },
+      "control_mode": { "name": "Control mode" },
+      "son": { "name": "Sound" },
+      "demarrage_automatique": { "name": "Automatic startup" }
+    },
+    "number": {
+      "puissance": { "name": "Power level" },
+      "temperature_consigne": { "name": "Target temperature" },
+      "temperature_minimum": { "name": "Minimum temperature" }
+    },
+    "select": {
+      "fan": { "name": "Fan" },
+      "sortie": { "name": "Outlet" }
+    }
+  }
+}

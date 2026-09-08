@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+.DS_Store
+*.orig
+
+# Config locale (jetons d'auth MCP en clair) et settings Claude Code locaux
+# — jamais destinés à un repo public.
+.mcp.json
+.claude/
