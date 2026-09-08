@@ -18,3 +18,8 @@ build/
 # Notes de projet perso (infos réseau/config locale) — jamais destinées
 # à ce repo public, gardées uniquement en local pour référence.
 PLUGIN_NOTES.md
+
+# Vrai logo MCZ (marque déposée) — usage local uniquement (install
+# ha-test), jamais dans ce repo public pour éviter de laisser penser à
+# une intégration officielle MCZ.
+400x400ia-75.png
