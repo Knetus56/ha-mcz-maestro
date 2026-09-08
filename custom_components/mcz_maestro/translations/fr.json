@@ -1,0 +1,47 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "data": {
+          "name": "Nom",
+          "topic_prefix": "Préfixe des topics MQTT"
+        }
+      }
+    },
+    "error": {
+      "invalid_topic_prefix": "Le préfixe de topic ne peut pas être vide"
+    },
+    "abort": {
+      "already_configured": "Ce préfixe de topic est déjà configuré"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "temperature_fumee": { "name": "Température fumées" },
+      "temperature_ambiante": { "name": "Température ambiante" },
+      "infos": { "name": "État" }
+    },
+    "binary_sensor": {
+      "online": { "name": "En ligne" },
+      "bac_vide": { "name": "Bac vide" }
+    },
+    "button": {
+      "reboot": { "name": "Redémarrer le pont" }
+    },
+    "switch": {
+      "on_off": { "name": "Marche/arrêt" },
+      "control_mode": { "name": "Mode de contrôle" },
+      "son": { "name": "Son" },
+      "demarrage_automatique": { "name": "Démarrage automatique" }
+    },
+    "number": {
+      "puissance": { "name": "Puissance" },
+      "temperature_consigne": { "name": "Température de consigne" },
+      "temperature_minimum": { "name": "Température minimum" }
+    },
+    "select": {
+      "fan": { "name": "Ventilateur" },
+      "sortie": { "name": "Sortie" }
+    }
+  }
+}
