@@ -15,9 +15,11 @@ build/
 .mcp.json
 .claude/
 
-# Notes de projet perso (infos réseau/config locale) — jamais destinées
-# à ce repo public, gardées uniquement en local pour référence.
+# Notes de projet perso / notes de session Claude (infos réseau/config
+# locale) — jamais destinées à ce repo public, gardées uniquement en
+# local pour référence.
 PLUGIN_NOTES.md
+CLAUDE.md
 
 # Fichier source brut du logo MCZ récupéré par fredo — la copie utilisée
 # comme icône du composant vit directement sous custom_components/mcz_maestro/
