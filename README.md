@@ -15,8 +15,4 @@ climate, sensors (température ambiante/fumées, état texte), binary_sensors
 son, démarrage auto), numbers (puissance, consigne, température minimum),
 selects (ventilateur, sortie).
 
-## Installation
 
-Copier `custom_components/mcz_maestro/` dans le dossier `custom_components`
-de Home Assistant, redémarrer, puis ajouter l'intégration "MCZ Maestro"
-depuis Réglages → Appareils et services.
