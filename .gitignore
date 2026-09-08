@@ -14,3 +14,7 @@ build/
 # — jamais destinés à un repo public.
 .mcp.json
 .claude/
+
+# Notes de projet perso (infos réseau/config locale) — jamais destinées
+# à ce repo public, gardées uniquement en local pour référence.
+PLUGIN_NOTES.md
