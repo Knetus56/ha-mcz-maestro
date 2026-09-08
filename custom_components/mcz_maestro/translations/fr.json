@@ -23,7 +23,7 @@
     },
     "binary_sensor": {
       "online": { "name": "En ligne" },
-      "bac_vide": { "name": "Bac vide" }
+      "bac_vide": { "name": "Bac à granulés" }
     },
     "button": {
       "reboot": { "name": "Redémarrer le pont" }
@@ -42,6 +42,14 @@
     "select": {
       "fan": { "name": "Ventilateur" },
       "sortie": { "name": "Sortie" }
+    }
+  },
+  "state": {
+    "binary_sensor": {
+      "bac_vide": {
+        "on": "Vide",
+        "off": "Plein"
+      }
     }
   }
 }

@@ -43,9 +43,17 @@ class MczOnlineBinarySensor(MczMqttEntity, BinarySensorEntity):
 
 
 class MczBacVideBinarySensor(MczMqttEntity, BinarySensorEntity):
-    """Capteur bouton local sur l'ESP1 (pas une donnée du poêle)."""
+    """Capteur bouton local sur l'ESP1 (pas une donnée du poêle).
 
-    _attr_device_class = BinarySensorDeviceClass.PROBLEM
+    Pas de device_class : le texte "Vide"/"Plein" vient de
+    strings.json/translations (state.binary_sensor.bac_vide), plus
+    explicite que le générique "Problème détecté"/"OK" de device_class
+    PROBLEM. Icône dynamique assortie (tasse vide/pleine).
+    """
 
     def _handle_state(self, payload: str) -> None:
         self._attr_is_on = payload == "1"
+
+    @property
+    def icon(self) -> str:
+        return "mdi:cup-outline" if self.is_on else "mdi:cup"

@@ -23,7 +23,7 @@
     },
     "binary_sensor": {
       "online": { "name": "Online" },
-      "bac_vide": { "name": "Hopper empty" }
+      "bac_vide": { "name": "Hopper" }
     },
     "button": {
       "reboot": { "name": "Reboot bridge" }
@@ -42,6 +42,14 @@
     "select": {
       "fan": { "name": "Fan" },
       "sortie": { "name": "Outlet" }
+    }
+  },
+  "state": {
+    "binary_sensor": {
+      "bac_vide": {
+        "on": "Empty",
+        "off": "Full"
+      }
     }
   }
 }
