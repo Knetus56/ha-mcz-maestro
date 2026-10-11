@@ -38,9 +38,11 @@ CMD_TEMPERATURE_CONSIGNE = "Set/temperature_consigne"
 CMD_ON_OFF = "Set/on_off"
 CMD_SON = "Set/son"
 
-# Valeurs magiques du protocole poêle pour Set/on_off (cf. PLUGIN_NOTES.md).
+# Payloads de Set/on_off : "0" = arrêt, tout le reste = marche. C'est l'ESP1
+# qui traduit en valeurs magiques du poêle (WriteParametri|34|40 ou |34|1) ;
+# envoyer "40" ici rallumait donc le poêle au lieu de l'éteindre.
 ON_OFF_ON = "1"
-ON_OFF_OFF = "40"
+ON_OFF_OFF = "0"
 
 # fan / sortie : 0-5 = valeur directe, 6 = mode "A" (auto) côté HA.
 FAN_SORTIE_AUTO_RAW = "6"
