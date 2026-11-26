@@ -53,7 +53,7 @@ class MczClimate(MczEntity, ClimateEntity):
     """Le poêle, vu comme un climate HA (marche/arrêt + consigne)."""
 
     _attr_name = None
-    _attr_temperature_unit = UnitOfTemperature.CELSIUS
+    _attr_native_temperature_unit = UnitOfTemperature.CELSIUS
     _attr_hvac_modes = [HVACMode.OFF, HVACMode.HEAT]
     _attr_supported_features = ClimateEntityFeature.TARGET_TEMPERATURE
     _attr_min_temp = MIN_TEMP
@@ -83,7 +83,7 @@ class MczClimate(MczEntity, ClimateEntity):
         @callback
         def _current_temperature(msg: Any) -> None:
             try:
-                self._attr_current_temperature = float(msg.payload)
+                self._attr_native_current_temperature = float(msg.payload)
             except ValueError:
                 return
             self.async_write_ha_state()
@@ -91,7 +91,7 @@ class MczClimate(MczEntity, ClimateEntity):
         @callback
         def _target_temperature(msg: Any) -> None:
             try:
-                self._attr_target_temperature = float(msg.payload)
+                self._attr_native_target_temperature = float(msg.payload)
             except ValueError:
                 return
             self.async_write_ha_state()
